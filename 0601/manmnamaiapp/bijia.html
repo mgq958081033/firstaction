@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--引入第三方框架-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!--引入自己的css 文件-->
+    <link rel="stylesheet/less" type="text/less" href="css/base.less">
+    <link rel="stylesheet/less" type="text/less" href="css/bijia.less">
+    <!-- 编译less文件的js -->
+    <script src="lib/less/less.min.js"></script>
+</head>
+
+<body>
+    <!--header start  -->
+    <header id="header">
+        <div class="logo">
+            <a href="#"><img src="images/header_logo.png" alt=""></a>
+        </div>
+        <div class="app-download">
+            <a href="#"><img src="images/header_app.png" alt=""></a>
+        </div>
+    </header>
+    <!--header start  -->
+
+    <!--search start  -->
+    <section id="search">
+        <form action="#">
+            <input type="search" placeholder="请输入你想比价的商品">
+            <input type="button" value="search">
+        </form>
+    </section>
+    <!--search start  -->
+
+    <!--menu start  -->
+    <section id="product-bijia">
+        <nav class="nav">
+            <ol class="breadcrumb">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">全部分类</a></li>
+                <li class="active"></li>
+            </ol>
+        </nav>
+        <div class="product-bijia">
+            <h3>乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</h3>
+            <div class="product-bijia-img">
+                <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png" alt="">
+
+            </div>
+            <div class="product-bijia-clect">
+                <img src="http://www.zuyushop.com/wap/images/sc.jpg" alt="">
+            </div>
+        </div>
+        <ul class="tab-list">
+            <li>比价购买</li>
+            <li>比价参数</li>
+            <li>比价评价</li>
+        </ul>
+    </section>
+    <!--menu start  -->
+
+
+    <!--fotter start  -->
+    <fotter id="fotter">
+
+        <div class="login-box">
+            <div class="login ">
+                <a href="javascript:void(0)">登录</a>
+            </div>
+            <div class="resgiter ">
+                <a href="javascript:void(0)">登录</a>
+            </div>
+            <div class="go-top ">
+                <a href="javascript:void(0)"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+            </div>
+        </div>
+        <div class="fotter-bottom">
+            <div class="fotter-bototm-top">
+                <span>手机APP下载</span>
+                <span>慢慢买手机版</span>
+                <span> -- 掌上比价平台</span>
+            </div>
+            <div class="fotter-bototm-top">
+                m.manmanbuy.com
+            </div>
+        </div>
+    </fotter>
+    <!--fotter start  -->
+    <!--菜单展示模板  start-->
+    <script type="text/html" id="categoryProductTpl">
+        {{each result as value index}}
+        <li><a href="./productlist.html?category={{value.category}}&categoryid={{value.categoryId}}">{{value.category}}</a></li>
+        {{/each}}
+    </script>
+    <!--菜单展示模板  end-->
+
+
+    <!--categoryTitlTpl展示模板  start-->
+    <script type="text/html" id="categoryTitlTpl">
+        {{each result as value index}}
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading{{index}}">
+                <h4 class="panel-title">
+                    <a role="button" data-title="{{index}}" data-toggle="collapse" data-parent="#accordion" href="#collapse{{index}}" aria-expanded="true" aria-controls="collapseOne">
+                        {{value.title}}
+                        </a>
+                </h4>
+            </div>
+            <div id="collapse{{index}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading{{index}}">
+                <div class="panel-body">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <!--categoryTitlTpl列表展示模板  end-->
+
+    <!--引入js文件-->
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/template.js"></script>
+
+
+    <!--引入自己的js-->
+    <script src="js/category.js"></script>
+</body>
+
+</html>

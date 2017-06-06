@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--移动端视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--引入第三方 文件-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!--引入css文件-->
+    <link rel="stylesheet/less" href="css/base.less">
+    <link rel="stylesheet/less" href="css/category.less">
+    <!--引入less文件-->
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+
+    <!--header  start -->
+    <header id="header">
+        <div class="logo">
+            <a href="./index.html">
+                <img src="images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="app-download">
+            <a href="#">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!--header  end-->
+
+    <!--search  start -->
+    <section id="search" class="clearfix">
+        <form action="#">
+            <input type="search" placeholder="慢慢搜">
+            <input type="button" value="搜索">
+        </form>
+    </section>
+    <!--search  end -->
+
+
+
+
+    <!--category-title  start -->
+
+    <section id="category-title" class="clearfix">
+        <ul class="category-ul">
+
+            <!--
+
+            <li>
+                <a href="#">大 家 电</a>
+                <ul class="clearfix">
+                    <li> <a href="#">电视</a> </li>
+                    <li> <a href="#">电视</a> </li>
+                    <li> <a href="#">电视</a> </li>
+                    <li> <a href="#">电视</a> </li>
+                    <li> <a href="#">电视</a> </li>
+                    <li> <a href="#">电视</a> </li>
+                </ul>
+
+            </li>-->
+        </ul>
+    </section>
+    <!--category-title  end -->
+
+
+
+    <!--footer  start -->
+    <footer id="footer">
+
+        <div class="loginbox clearfix">
+            <div class="login">
+                <a href="#">登录</a>
+            </div>
+            <div class="resgiter">
+                <a href="#">注册</a>
+            </div>
+            <div class="goTop">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">
+                <a href="#">返回顶部</a>
+            </div>
+        </div>
+        <div class="login-bottom">
+            <p class="p-top">
+                <span>手机APP下载</span>
+                <span>慢慢买手机版</span>
+                <span> -- 掌上比价平台</span>
+            </p>
+            <p>
+
+                m.manmanbuy.com
+
+            </p>
+        </div>
+    </footer>
+    <!--footer  end -->
+
+
+    <!--search  start -->
+    <!--search  end -->
+    <!--主页菜单折扣商品 模板-->
+    <script type="text/html" id="categoryTitleTPL">
+        {{each result as value index}}
+        <li>
+            <a data-title-id={{value.titleId}} href="#">{{value.title}}</a>
+            <ul class="clearfix">
+                <!--<li> <a href="#">电视</a> </li>
+                <li> <a href="#">电视</a> </li>
+                <li> <a href="#">电视</a> </li>
+                <li> <a href="#">电视</a> </li>
+                <li> <a href="#">电视</a> </li>
+                <li> <a href="#">电视</a> </li>-->
+            </ul>
+
+        </li>
+
+        {{/each}}
+    </script>
+
+
+    <!--主页菜单menu  模板-->
+    <script type="text/html" id="categoryTitleProduct">
+        {{each result as value index}}
+
+        <li> <a href="./productlist.html?category={{value.category}}&categoryid={{value.categoryId}}&pageid=1">{{value.category}}</a> </li>
+        {{/each}}
+    </script>
+    <!--引入js文件-->
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="js/template.js"></script>
+    <script src='js/url.js'></script>
+    <script src="js/category.js"></script>
+
+</body>
+
+</html>

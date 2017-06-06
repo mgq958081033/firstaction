@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<div id="div"></div>
+
+<body>
+    <script>
+        var arr = "1,23,4,56,7";
+        var str = "";
+        arr.split(",").map(function(x) {
+
+            str += "<p>" + x + "</p>";
+
+        })
+
+        console.log(typeof str)
+        document.querySelector("#div").innerHTML = str;
+    </script>
+</body>
+
+</html>

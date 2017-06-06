@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+input,
+select,
+form images,
+button {
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+textarea {
+    width: 95%;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a:hover, a:focus {
+  
+     text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+img {
+    border: none;
+}
+
+input,
+img {
+    vertical-align: middle;
+}
+
+body {
+    color: #000;
+    font-family: arial;
+    background: #FFF;
+    overflow-x: hidden;
+}
+
+
+// common  start 
+
+// header  css start 
+#header {
+    background-color: #ff841d;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+    .logo {
+        float: left;
+        a {
+            img {
+                height: 25px;
+            }
+        }
+    }
+    .app-download {
+        float: right;
+        img {
+            height: 34px;
+        }
+    }
+}
+
+// header  css end
+// search  css start 
+#search {
+    form {
+        display: flex;
+        padding: 10px;
+        input[type="search"] {
+            flex: 1;
+            border: none;
+            background: #f1f1f1;
+            border-radius: 15px;
+            padding-left: 18px;
+            margin-right: 10px;
+        }
+        input[type="button"] {
+            width: 63px;
+            height: 30px;
+            color: #fff;
+            border: none;
+            line-height: 30px;
+            border-radius: 15px;
+            background-color: #ff841d;
+        }
+    }
+}
+
+// search  css end
+// footer  css start 
+#footer{
+    margin-top: 10px;
+    .loginbox{
+        margin-top: 20px;
+        text-align: center;
+        background: #efefef;
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+        >div{
+            width: 30%;
+            height: 34px;
+            border-right: 1px solid #c4c4c4;
+            float: left;
+            line-height: 34px;
+        }
+
+        .goTop{
+            width: 40%;
+            img{
+                margin-top: -3px;
+            }
+        }
+    }
+    .login-bottom{
+        text-align: center;
+        .p-top{
+            margin-top: 10px;
+            margin-bottom:0;
+            span{
+                font-size:12px;
+                &:first-child{
+                    color:red;
+                }
+                &:nth-child(2){
+                     color: #000;
+                }
+                 &:nth-child(3){
+                      color:#ccc;
+                }
+            }
+        }
+    }
+}
+// footer  css end
